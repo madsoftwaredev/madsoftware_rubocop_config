@@ -9,7 +9,8 @@ Gem::Specification.new do |spec|
   spec.email = ["marc.dagatan@gmail.com", "marc.dagatan@madsoftware.tech"]
 
   spec.summary = "A custom RuboCop configuration for MadSoftware projects."
-  spec.description = "This gem provides a custom RuboCop configuration tailored for MadSoftware projects, ensuring consistent code style and quality across all repositories."
+  spec.description = "This gem provides a custom RuboCop configuration tailored for MadSoftware projects, " \
+                     "ensuring consistent code style and quality across all repositories."
   spec.homepage = "https://github.com/madsoftwaredev/madsoftware_rubocop_config"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.2.0"
@@ -34,11 +35,12 @@ Gem::Specification.new do |spec|
 
   # RuboCop dependencies
   spec.add_dependency "rubocop", "~> 1.73.2"
+  spec.add_dependency "rubocop-factory_bot", "~> 2.27.0"
   spec.add_dependency "rubocop-performance", "~> 1.24.0"
   spec.add_dependency "rubocop-rails", "~> 2.30.3"
   spec.add_dependency "rubocop-rspec", "~> 3.5.0"
-  spec.add_dependency "rubocop-factory_bot", "~> 2.27.0"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
+  spec.metadata["rubygems_mfa_required"] = "true"
 end

@@ -1,0 +1,11 @@
+# Cursor IDE
+.cursor/
+
+# Ruby gem related
+*.gem
+.bundle/
+vendor/
+
+# OS specific
+.DS_Store
+Thumbs.db

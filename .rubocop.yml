@@ -1,0 +1,190 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-rspec_rails
+  - rubocop-factory_bot
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.2
+  Exclude:
+    - "db/**/*.rb"
+    - "vendor/**/*"
+    - "bin/**/*"
+
+Layout/LineLength:
+  Max: 120
+  AutoCorrect: true
+  AllowedPatterns: ['^\s*#']
+Layout/DotPosition:
+  EnforcedStyle: trailing
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Lint/MissingSuper:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 30
+  Exclude:
+    - "db/**/*.rb"
+    - "lib/**/*"
+    - "spec/**/*"
+    - "app/models/concerns/**/*.rb"
+Metrics/CyclomaticComplexity:
+  Max: 10
+  Exclude:
+    - "db/**/*.rb"
+    - "lib/**/*"
+    - "spec/**/*"
+    - "app/models/concerns/**/*.rb"
+Metrics/BlockLength:
+  Exclude:
+    - "config/**/*.rb"
+    - "db/**/*.rb"
+    - "lib/**/*"
+    - "spec/**/*"
+    - "app/models/concerns/**/*.rb"
+Metrics/PerceivedComplexity:
+  Max: 10
+  Exclude:
+    - "db/**/*.rb"
+    - "lib/**/*"
+    - "spec/**/*"
+    - "app/models/concerns/**/*.rb"
+Metrics/MethodLength:
+  Exclude:
+    - "db/**/*.rb"
+    - "lib/**/*"
+    - "spec/**/*"
+    - "app/models/ability.rb"
+    - "app/models/concerns/**/*.rb"
+  Max: 20
+
+Metrics/ClassLength:
+  Exclude:
+    - "db/**/*.rb"
+    - "lib/**/*"
+    - "spec/**/*"
+  Max: 200
+Metrics/ModuleLength:
+  CountComments: false
+  Exclude:
+    - "db/**/*.rb"
+    - "lib/**/*"
+    - "spec/**/*"
+    - "app/models/concerns/**/*.rb"
+  Max: 200
+
+Naming/PredicateName:
+  ForbiddenPrefixes:
+    - is_
+Naming/MethodName:
+  Exclude:
+    - "app/serializers/**/*.rb"
+
+Style/BlockDelimiters:
+  Exclude:
+    - "spec/**/*_spec.rb"
+Style/Documentation:
+  Enabled: false
+Style/FormatStringToken:
+  EnforcedStyle: template
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/KeywordParametersOrder:
+  Enabled: true
+Style/Lambda:
+  EnforcedStyle: literal
+Style/OptionalBooleanParameter:
+  Enabled: true
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+# Performance specific from rubocop-performance
+Performance/AncestorsInclude:
+  Enabled: true
+Performance/BigDecimalWithNumericArgument:
+  Enabled: true
+Performance/RedundantSortBlock:
+  Enabled: true
+Performance/RedundantStringChars:
+  Enabled: true
+Performance/ReverseFirst:
+  Enabled: true
+Performance/SortReverse:
+  Enabled: true
+Performance/Squeeze:
+  Enabled: true
+Performance/StringInclude:
+  Enabled: true
+Performance/Sum:
+  Enabled: true
+
+Rails:
+  Enabled: true
+Rails/BulkChangeTable:
+  Enabled: false
+Rails/HasAndBelongsToMany:
+  Enabled: false
+Rails/LexicallyScopedActionFilter:
+  Exclude:
+    - "app/controllers/concerns/**/*.rb"
+Rails/Output:
+  Enabled: false
+Rails/OutputSafety:
+  Enabled: true
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - staging
+Rails/SkipsModelValidations:
+  Enabled: false
+
+RSpec/AnyInstance:
+  Enabled: false
+RSpec/IteratedExpectation:
+  Enabled: false
+RSpec/Focus:
+  Enabled: false
+RSpec/ImplicitSubject:
+  Enabled: false
+RSpec/MultipleExpectations:
+  Enabled: false
+RSpec/ExampleLength:
+  Enabled: false
+RSpec/SubjectStub:
+  Enabled: false
+RSpec/LetSetup:
+  Enabled: false
+RSpec/DescribeClass:
+  Exclude:
+    - "spec/db/**/*_spec.rb"
+    - "spec/requests/**/*_spec.rb"
+RSpec/ContextWording:
+  Exclude:
+    - "spec/acceptance/*_spec.rb"
+RSpec/EmptyExampleGroup:
+  Exclude:
+    - "spec/acceptance/*_spec.rb"
+RSpec/IndexedLet:
+  Exclude:
+    - "spec/support/shared_contexts/*.rb"
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+Style/RedundantAssignment:
+  Enabled: false
+
+Style/RedundantFetchBlock:
+  Enabled: false

@@ -2,7 +2,6 @@ require:
   - rubocop-performance
   - rubocop-rails
   - rubocop-rspec
-  - rubocop-rspec_rails
   - rubocop-factory_bot
 
 AllCops:
@@ -12,6 +11,9 @@ AllCops:
     - "db/**/*.rb"
     - "vendor/**/*"
     - "bin/**/*"
+    - "node_modules/**/*"
+    - "tmp/**/*"
+    - "log/**/*"
 
 Layout/LineLength:
   Max: 120
@@ -62,7 +64,6 @@ Metrics/MethodLength:
     - "db/**/*.rb"
     - "lib/**/*"
     - "spec/**/*"
-    - "app/models/ability.rb"
     - "app/models/concerns/**/*.rb"
   Max: 20
 

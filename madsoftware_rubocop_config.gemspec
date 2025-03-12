@@ -33,11 +33,11 @@ Gem::Specification.new do |spec|
   # spec.add_dependency "example-gem", "~> 1.0"
 
   # RuboCop dependencies
-  spec.add_dependency "rubocop", "~> 1.60"
-  spec.add_dependency "rubocop-performance", "~> 1.20"
-  spec.add_dependency "rubocop-rails", "~> 2.23"
-  spec.add_dependency "rubocop-rspec", "~> 2.27"
-  spec.add_dependency "rubocop-factory_bot", "~> 2.25"
+  spec.add_dependency "rubocop", "~> 1.73.2"
+  spec.add_dependency "rubocop-performance", "~> 1.24.0"
+  spec.add_dependency "rubocop-rails", "~> 2.30.3"
+  spec.add_dependency "rubocop-rspec", "~> 3.5.0"
+  spec.add_dependency "rubocop-factory_bot", "~> 2.27.0"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html

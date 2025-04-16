@@ -45,7 +45,21 @@ bundle exec rubocop
 
 ### Dependencies
 
-All required RuboCop extensions (rubocop-performance, rubocop-rails, rubocop-rspec, and rubocop-factory_bot) are automatically installed when you add this gem to your project. You don't need to specify them separately in your Gemfile.
+Although this gem includes RuboCop extensions as dependencies, you may need to explicitly add them to your Gemfile to avoid CI errors:
+
+```ruby
+group :development, :test do
+  gem 'madsoftware_rubocop_config'
+  
+  # Explicitly include RuboCop extensions to avoid CI errors
+  gem 'rubocop-performance'
+  gem 'rubocop-rails'
+  gem 'rubocop-rspec'
+  gem 'rubocop-factory_bot'
+end
+```
+
+This ensures all required extensions are properly loaded when the configuration is used, especially in CI environments.
 
 ### Customizing Rules
 

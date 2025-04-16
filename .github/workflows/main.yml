@@ -23,5 +23,14 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
+      - name: Configure bundler
+        run: bundle config set --local frozen false
+      - name: Install required gems explicitly
+        run: |
+          gem install rubocop -v 1.73.2
+          gem install rubocop-performance -v 1.24.0
+          gem install rubocop-rails -v 2.30.3
+          gem install rubocop-rspec -v 3.5.0
+          gem install rubocop-factory_bot -v 2.27.0
       - name: Run the default task
         run: bundle exec rake
